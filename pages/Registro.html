@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../css/estilos.css">
+    <title>Registro</title>
+</head>
+<body>
+    <form action="php/Registro.php" method="POST">
+        
+        <label for="Usuario">Ingrese su usuario:</label>
+        <input type="text" required placeholder="Ejemplo123" minlength="5" maxlength="20" name="Usuario" id="Usuario">
+
+        <label for="Correo">Ingrese su correo:</label>
+        <input type="email" required placeholder="Ejemplo@ejemplo.com" name="Correo" id="Correo">
+
+        <label for="Nombre">Ingrese su nombre completo:</label>
+        <input type="text" required placeholder="Maryam Ondricka" maxlength="50" name="Nombre" id="Nombre">
+
+        <label for="Contrasena1">Ingrese su contraseña:</label>
+        <input type="password" required placeholder="*************" minlength="7" name="Contrasena1" id="Contrasena1">
+
+        <label for="Contrasena2">Repita su contraseña:</label>
+        <input type="password" required placeholder="*************" minlength="7" name="Contrasena2" id="Contrasena2">
+
+        <label for="Departamento">Seleccione su Departamento</label>
+        <select name="Departamento" id="Departamento" required>
+            <option value="">Seleccione Departamento...</option>
+            <option value="1">Antioquia</option>
+        </select>
+
+        <label for="Departamento">Seleccione su Municipio</label>
+        <select name="Departamento" id="Departamento" required>
+            <option value="">Seleccione Departamento...</option>
+            <option value="1">Medellin</option>
+        </select>
+
+        <input type="submit" value="Registrarse">
+        <a href="Login.html" class="login">Login</a>
+    </form>
+</body>
+</html>
