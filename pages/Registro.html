@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="../css/main.css">
     <title>Registro</title>
 </head>
+
 <body>
     <main>
         <form action="" method="" class="formulario" id="formulario">
@@ -17,37 +18,44 @@
                     <input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="Regan_Price">
                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
                 </div>
-                <p class="formulario__input-error">El usuario debe tener entre 4 y 16 digitos y solo puede contener numeros, letras y guion bajo.</p>
+                <p class="formulario__input-error">El usuario debe tener entre 4 y 16 digitos y solo puede contener
+                    numeros, letras y guion bajo.</p>
             </div>
 
             <!-- Correo Electronico -->
             <div class="formulario__grupo" id="grupo__correo">
                 <label for="correo" class="formulario__label">Correo Electronico</label>
                 <div class="formulario__grupo-input">
-                    <input type="email" class="formulario__input" name="correo" id="correo" placeholder="Dudley_Mosciski@example.net">
+                    <input type="email" class="formulario__input" name="correo" id="correo"
+                        placeholder="Dudley_Mosciski@example.net">
                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
                 </div>
-                <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+                <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y
+                    guion bajo.</p>
             </div>
 
             <!-- Nombres -->
             <div class="formulario__grupo" id="grupo__nombres">
                 <label for="nombres" class="formulario__label">Nombres</label>
                 <div class="formulario__grupo-input">
-                    <input type="text" class="formulario__input" name="nombres" id="nombres" placeholder="Santiago Bell">
+                    <input type="text" class="formulario__input" name="nombres" id="nombres"
+                        placeholder="Santiago Bell">
                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
                 </div>
-                <p class="formulario__input-error">El nombre debe tener unicamente letras y espacios. Entre 1 y 40 caracteres.</p>
+                <p class="formulario__input-error">El nombre debe tener unicamente letras y espacios. Entre 1 y 40
+                    caracteres.</p>
             </div>
 
             <!-- Apellidos -->
             <div class="formulario__grupo" id="grupo__apellidos">
                 <label for="apellidos" class="formulario__label">Apellidos</label>
                 <div class="formulario__grupo-input">
-                    <input type="text" class="formulario__input" name="apellidos" id="apellidos" placeholder="Santiago Bell">
+                    <input type="text" class="formulario__input" name="apellidos" id="apellidos"
+                        placeholder="Santiago Bell">
                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
                 </div>
-                <p class="formulario__input-error">El apellido debe tener unicamente letras y espacios. Entre 1 y 40 caracteres.</p>
+                <p class="formulario__input-error">El apellido debe tener unicamente letras y espacios. Entre 1 y 40
+                    caracteres.</p>
             </div>
 
             <!-- Contraseña -->
@@ -74,9 +82,40 @@
             <div class="formulario__grupo" id="grupo__departamento">
                 <label for="departamento" class="formulario__label">Departamento</label>
                 <div class="formulario__grupo-input">
-                    <select class="formulario__select" name="departamento" id="departamento">
+                    <select class="formulario__select" name="departamento" id="departamento" required>
                         <option value="">Seleccione un departamento</option>
+                        <option value="0">Amazonas</option>
                         <option value="1">Antioquia</option>
+                        <option value="2">Arauca</option>
+                        <option value="3">Atlantico</option>
+                        <option value="4">Bolivar</option>
+                        <option value="5">Boyaca</option>
+                        <option value="6">Caldas</option>
+                        <option value="7">Caqueta</option>
+                        <option value="8">Casanare</option>
+                        <option value="9">Cauca</option>
+                        <option value="10">Cesar</option>
+                        <option value="11">Choco</option>
+                        <option value="12">Cordoba</option>
+                        <option value="13">Cundinamarca</option>
+                        <option value="14">Guainia</option>
+                        <option value="15">Guaviare</option>
+                        <option value="16">Huila</option>
+                        <option value="17">La Guajira</option>
+                        <option value="18">Magdalena</option>
+                        <option value="19">Meta</option>
+                        <option value="20">Nariño</option>
+                        <option value="21">Norte de Santander</option>
+                        <option value="22">Putumayo</option>
+                        <option value="23">Quindio</option>
+                        <option value="24">Risaralda</option>
+                        <option value="25">San Andres y Providencia</option>
+                        <option value="26">Santander</option>
+                        <option value="27">Sucre</option>
+                        <option value="28">Tolima</option>
+                        <option value="29">Valle del Cauca</option>
+                        <option value="30">Vaupes</option>
+                        <option value="31">Vichada</option>
                     </select>
                 </div>
                 <p class="formulario__input-error">Debe Seleccionar un departamento</p>
@@ -86,7 +125,7 @@
             <div class="formulario__grupo" id="grupo__municipio">
                 <label for="municipio" class="formulario__label">Municipio</label>
                 <div class="formulario__grupo-input">
-                    <select class="formulario__select" name="municipio" id="municipio">
+                    <select class="formulario__select" name="municipio" id="municipio" required>
                         <option value="">Seleccione un Municipio</option>
                         <option value="1">Medellin</option>
                     </select>
@@ -102,7 +141,8 @@
             </div>
 
             <div class="formulario__mensaje" id="formulario__mensaje">
-                <p><i class="fas fa-exclamation-triangle"></i> <b>Error: </b> Por favor, rellena el formulario correctamente.</p>
+                <p><i class="fas fa-exclamation-triangle"></i> <b>Error: </b> Por favor, rellena el formulario
+                    correctamente.</p>
             </div>
 
             <div class="formulario__grupo formulario__grupo-btn-enviar">
@@ -113,6 +153,7 @@
     </main>
 
     <script src="../js/main.js"></script>
-	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

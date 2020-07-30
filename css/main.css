@@ -1,9 +1,11 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto',sans-serif;
+    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
     background: #E5E5E5;
 }
 
@@ -13,6 +15,46 @@ main{
     margin: auto;
     padding: 40px;
 }
+
+/* Header */
+
+.encabezado{
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    height: 50px;
+}
+
+.encabezado ul {
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.encabezado ul li{
+    display: inline-block;
+    /* border-right: 1px solid #f2f2f2; */
+}
+
+.encabezado ul li a {
+    display: block;
+    color: #000;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.encabezado ul li a:hover{
+    background-color: #1ed12d;
+    color: #fff;
+}
+
+.derecha {
+    float: right;
+}
+
+/* Formulario */
 
 .formulario{
     display: grid;
@@ -139,8 +181,6 @@ main{
     display: block;
 }
 
-/* Validaciones */
-
 .formulario__grupo-correcto .formulario__validacion-estado{
     color: #1ed12d;
     opacity: 1;
@@ -163,3 +203,128 @@ main{
     border: 3px solid #bb2929;
 }
 
+/* Contenedores */
+
+.contenedor{
+    /* margin-top: 2px; */
+    height: 900px;
+}
+
+/* Inicio */
+
+.inicio{
+    background-image: url("https://steamuserimages-a.akamaihd.net/ugc/692780106200366253/C4E02DCFA030EBE9463C175BC74535C457E38644/");
+    height: 978px;
+}
+
+.espacio{
+    height: 10%;
+}
+
+.logo{
+    text-align: center;
+}
+
+.inicio p{
+    color: #fff;
+    margin-bottom: 60px;
+}
+
+.btn__info{
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #1ed12d;
+    color: #fff;
+}
+
+.btn__info:hover{
+    background-color: #16881f;
+}
+
+.inicio .contenido {
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    width: 60%;
+    margin-left: 20%;
+}
+
+/* Nosotros */
+
+.nosotros {
+    background-color: #1ed12d;
+    color: #fff;
+}
+
+.nosotros .contenido {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    width: 60%;
+    margin-left: 20%;
+}
+
+.titulo{
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.premio{
+    margin-bottom: 100px;
+}
+
+.nosotros .btn__galeria{
+    color: #fff;
+    background-color: #000;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+
+/* Galería */
+
+.galeria{
+    padding-top:60px;
+    padding-left: 40px;
+    background-color: #000;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.galeria img{
+    border-radius: 10px;
+}
+
+  /* Contactenos */
+.contactenos{
+    height: 400px;
+    background-color:#fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.contactenos__masinfo{
+    grid-column: span 2;
+    text-align: center;
+    border-right: 1px solid #bebbbb;
+}
+
+.contactenos .contactenos__masinfo p {
+    font-size: 20px;
+}
+
+.contactenos .contactenos__formulario{
+    padding-top: 20%;
+    text-align: center;
+}
+
+.contactenos .contactenos__formulario .contactenos__correo{
+    padding-top: 50px;
+}
+
+    /* Mas Info */
+footer{
+    text-align: center;
+}

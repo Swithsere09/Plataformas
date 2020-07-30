@@ -1,16 +1,123 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/materialize.css">
     <link rel="stylesheet" href="css/main.css">
-    <title>Index Micrositio</title>
+    <title>Hosting</title>
+    <link
+        href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+        rel='stylesheet' type='text/css'>
+    <link
+        href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
+        rel='stylesheet' type='text/css'>
 </head>
+
 <body>
-    <a href="pages/Login.html">Login</a><br><br>
 
-    <a href="pages/Registro.html">Registro</a>
+    <!-- Header - Menú -->
+    <header class="encabezado" id="encabezado">
+        <ul class="section">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#contactenos">Contactenos</a></li>
+            <li class="derecha"><a href="pages/Login.html" target="_blank">Login</a></li>
+            <li class="derecha"><a href="pages/Registro.html" target="_blank">Registro</a></li>
+        </ul>
+    </header>
 
+    <!-- Sobre Nosotros -->
+    <div class="section scrollspy inicio contenedor" id="inicio">
+
+        <div class="espacio"></div>
+        <div class="espacio"></div>
+
+        <div class="logo">
+            <img src="https://esports.as.com/2018/03/09/600px-ESL_Pro_League.png?hash=93a3c2314869be1552ac79a8ea0bf628d7054084"
+                alt="">
+        </div>
+        <div class="contenido">
+            <p>Sitio web para el registro y hosteo de participantes a torneo de Cs-Go</p>
+            <a class="btn__info" href="#nosotros">
+                Leer Mas
+            </a>
+        </div>
+    </div>
+
+    <!-- Sobre Nosotros -->
+    <div class="section scrollspy nosotros contenedor" id="nosotros">
+        <div class="espacio"></div>
+
+        <div class="contenido">
+            <p class="titulo">
+                ESL PRO LEAGUE
+            </p>
+            <br>
+            <div class="espacio"></div>
+
+            <p>La ESL Pro League es la máxima competición organizada por ESL, sin contar las Intel Extreme Masters.
+                Torneo de ambito internacional, en el cual, en sus fases finales, los mejores equipos se reúnen en
+                formato presencial en Dallas-Texas, para decidir cuál de ellos es el mejor del continente.</p>
+
+            <p class="premio">
+                Premio: 1'000.000$
+            </p>
+
+            <a href="#galeria" class="btn__galeria">
+                Leer Mas
+            </a>
+        </div>
+    </div>
+
+    <!-- Galería de imagenes -->
+    <div class="section scrollspy galeria contenedor" id="galeria">
+
+        <img id="myImg1" src="img/img1.jpg" alt="Snow" style="width:100%;max-width:550px">
+        <img id="myImg2" src="img/img2.jpg" alt="Snow" style="width:100%;max-width:550px">
+        <img id="myImg3" src="img/img3.jpg" alt="Snow" style="width:100%;max-width:550px">
+        <img id="myImg4" src="img/img4.jpg" alt="Snow" style="width:100%;max-width:550px">
+        <img id="myImg5" src="img/img5.jpg" alt="Snow" style="width:100%;max-width:550px">
+        <img id="myImg6" src="img/img6.jpg" alt="Snow" style="width:100%;max-width:550px">
+    </div>
+
+    <!-- Contactenos -->
+    <div class="section scrollspy contactenos" id="contactenos">
+        <div class="contactenos__masinfo">
+            <br><br><br><br><br>
+            <h2>¡CONTÁCTENOS!</h2>
+            <p>Si necesita información adicional, puede llamarnos o enviarnos un mensaje.</p>
+        </div>
+        <div class="contactenos__formulario">
+            <div class="contactenos__telefono">
+                <i class="fa fa-phone fa-3x sr-contact"></i>
+                <p>310-433-63-61</p>
+            </div>
+            <div class="contactenos__correo">
+                <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+                <p>correo@correo.com.co</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        2020 Daniel Jesus Castillo Botero - UPB &copy Todos los derechos reservados.
+    </footer>
+
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="js/materialize.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.scrollspy');
+            var instances = M.ScrollSpy.init(elems, {
+                scrollOffset: 50
+            });
+        });
+
+    </script>
 </body>
+
 </html>
