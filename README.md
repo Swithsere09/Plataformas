@@ -1,6 +1,6 @@
 # Micrositio
 
-Descripcion ..
+Sitio web para el registro y hosteo de participantes a torneo de Cs-Go
 
 ## Autor
 Daniel J. Castilllo B.
