@@ -10,7 +10,7 @@
 
 <body>
     <main>
-        <form action="" method="" class="formulario" id="formulario">
+        <form action="../php/registro.php" method="POST" class="formulario" id="formulario">
             <!-- Usuario -->
             <div class="formulario__grupo" id="grupo__usuario">
                 <label for="usuario" class="formulario__label">Usuario</label>
@@ -82,7 +82,7 @@
             <div class="formulario__grupo" id="grupo__departamento">
                 <label for="departamento" class="formulario__label">Departamento</label>
                 <div class="formulario__grupo-input">
-                    <select class="formulario__select" name="departamento" id="departamento" required>
+                    <select class="formulario__select" name="departamento" id="departamento" onchange="revision()" required>
                         <option value="">Seleccione un departamento</option>
                         <option value="0">Amazonas</option>
                         <option value="1">Antioquia</option>
@@ -126,8 +126,7 @@
                 <label for="municipio" class="formulario__label">Municipio</label>
                 <div class="formulario__grupo-input">
                     <select class="formulario__select" name="municipio" id="municipio" required>
-                        <option value="">Seleccione un Municipio</option>
-                        <option value="1">Medellin</option>
+                        <option value="">Seleccione un departamento</option>
                     </select>
                 </div>
                 <p class="formulario__input-error">Debe Seleccionar un municipio</p>

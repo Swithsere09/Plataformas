@@ -14,7 +14,8 @@ const campos = {
     correo: false,
     nombres: false,
     apellidos: false,
-    contrasena: false
+    contrasena: false,
+    departamento: false
 }
 
 const validarFormulario = (e) => {
@@ -40,7 +41,6 @@ const validarFormulario = (e) => {
             ValidarContrasena2();
             break;
     }
-
 }
 
 const validarCampo = (expresion, input, campo) => {
@@ -88,22 +88,24 @@ inputs.forEach((input) => {
 })
 
 formulario.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    if (campos.usuario && campos.correo && campos.nombres && campos.apellidos && campos.contrasena) {
-        formulario.reset();
-
-        document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
-        document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
-
-        setTimeout(() => {
-            document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
-
-            document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
-                icono.classList.remove('formulario__grupo-correcto');
-            });
-        }, 3000);
-    } else {
+    if (!campos.usuario || !campos.correo || !campos.nombres || !campos.apellidos || !campos.contrasena) {
+        e.preventDefault();
         document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
     }
 });
+
+function revision() {
+    var ciudades = [["Leticia"], ["Medellín", "Envigado", "Sabaneta", "Bello"], ["Arauca", "Arauquita", "Saravena"], ["Barranquilla"], ["Cartagena"], ["Tunja"], ["Manizales"], ["Florencia"], ["Yopal"], ["Popayan"], ["Valledupar"], ["Quibdo"], ["Monteria"], ["Bogota", "Bituima", "Chipaque", "Ubaque", "Cota"], ["Inirida"], ["San Jose del Guaviare"], ["Neiva"], ["Rioacha"], ["Santa Marta", "Algarrobo", "Concordia"], ["Villavicencio"], ["Pasto"], ["Cucuta"], ["Mocoa"], ["Armenia"], ["Pereira", "Dosquebradas", "La Virginia", "Santa Rosa De Cabal"], ["San Andres"], ["Bucaramanga"], ["Sincelejo"], ["Ibague"], ["Cali", "Buga", "Palmira", "Cartago"], ["Mitu"], ["Puerto Carreño"]];
+
+    var arreglo;
+    var departamentos = document.getElementById("departamento");
+    var municipios = document.getElementById("municipio");
+    arreglo = ciudades[departamentos.value];
+    municipios.innerHTML = "";
+
+    for (var i = 0; i < arreglo.length; i++) {
+        var option = document.createElement("option");
+        option.innerHTML = ciudades[departamentos.value][i];
+        municipios.appendChild(option);
+    }
+}
