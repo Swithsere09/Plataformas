@@ -1,16 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de usuario</title>
-</head>
-<body>
-    <?php 
-        echo"
-        <h1>Esta en la apgina de registro correctamente</h1>
-        ";
+<?php 
+        $FraseSalt="QWERTY";
+        $usuario = array();
+
+        $usuario["usuario"] = $_POST["usuario"];
+        $usuario["correo"] = $_POST["correo"];
+        $usuario["nombres"] = $_POST["nombres"];
+        $usuario["apellidos"] = $_POST["apellidos"];
+        $usuario["departamento"] = $_POST["departamento"];
+        $usuario["municipio"] = $_POST["municipio"];
+        $usuario["Contrasena"] = md5($FraseSalt.$_POST["Contrasena"]);
+
+        echo json_encode($usuario);
     ?>
-    
-</body>
-</html>

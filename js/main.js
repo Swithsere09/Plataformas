@@ -88,9 +88,11 @@ inputs.forEach((input) => {
 })
 
 formulario.addEventListener('submit', (e) => {
+    e.preventDefault();
     if (!campos.usuario || !campos.correo || !campos.nombres || !campos.apellidos || !campos.contrasena) {
-        e.preventDefault();
         document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
+    } else {
+        Procesamiento();
     }
 });
 
@@ -108,4 +110,22 @@ function revision() {
         option.innerHTML = ciudades[departamentos.value][i];
         municipios.appendChild(option);
     }
+}
+
+function Procesamiento() {
+    fetch('../php/registro.php', {
+        method: 'post',
+        body: new FormData(formulario)
+    }).then(function (response) {
+        return response.json();
+    }).then(function (json) {
+        CargaLocalStorage(json);
+    }).catch(function (err) {
+        // Ocurrio un error
+    });
+}
+
+function CargaLocalStorage(json) {
+    localStorage.setItem("usuario", JSON.stringify(json));
+    location.href = "Login.html";
 }

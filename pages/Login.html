@@ -9,7 +9,7 @@
 <body>
     
     <main>
-        <form action="#" method="POST" class="formulario">
+        <form method="POST" class="formulario" id="formulario">
         
             <!-- Usuario -->
             <div class="formulario__grupo" id="grupo__usuario">
@@ -35,12 +35,16 @@
 
             <!-- Enviar formulario -->
             <div class="formulario__grupo formulario__grupo-btn-enviar">
-                <button type="submit" class="formulario__btn">Enviar</button>
-                <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario Enviado Exitosamente!</p>
+                <input type="submit" class="formulario__btn" onclick="Procesamiento()" value="Enviar">
             </div>
         </form>
     </main>
 
-    <script src="../js/main.js"></script>
+    <br><br>
+    <div class="logo">
+        <img src="https://esports.as.com/2018/03/09/600px-ESL_Pro_League.png?hash=93a3c2314869be1552ac79a8ea0bf628d7054084" alt="">
+    </div>
+
+    <script src="../js/login.js"></script>
 </body>
 </html>
