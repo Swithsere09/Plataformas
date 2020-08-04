@@ -2,9 +2,9 @@ const formulario = document.getElementById('formulario');
 
 function Procesamiento() {
     let usuario = localStorage.getItem("usuario");
-    console.log("0");
+    // console.log("0");
     if (usuario) {
-        console.log("1");
+        // console.log("1");
         fetch('../php/registro.php', {
             method: 'post',
             body: new FormData(formulario)
@@ -20,10 +20,10 @@ function Procesamiento() {
 
 function ValidacionDatos(json) {
     let usuario = JSON.parse(localStorage.getItem("usuario"));
-    console.log("entro...");
+    // console.log("entro...");
     if (usuario.Contrasena == json.Contrasena) {
-        console.log("entro");
-        //location.href = "Principal.html";
+        // console.log("entro");
+        location.href = "Principal.html";
     } else {
         alert("Clave incorrecta");
     }
